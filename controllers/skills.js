@@ -1,25 +1,18 @@
-const skills = [
-    {
-        name: 'coding',
-        type: 'hard',
-        level: 'intermediate'
-    }, 
-    {
-        name: 'problem solving',
-        type: 'soft',
-        level: 'advanced'
-    },
-    {
-        name: 'teamwork',
-        type: 'soft',
-        level: 'beginner'
-    }
-]
+const Skill = require('../models/skills')
 
-function getAll() {
-    return skills
+function index(req, res) {
+    res.render('/skills/index', {
+        skills: Skill.getAll()
+    })
 }
 
-function getOne(name) {
-    return skills.find(skill => skill.name === name)
+function show(req, res) {
+    res.render('/skills/show', {
+        skill: Skill.getOne(req.params.name)
+    })
+}
+
+module.exports = {
+    index,
+    show
 }
