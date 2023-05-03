@@ -37,5 +37,6 @@ function update(name, updatedSkill) {
 module.exports = {
     getAll,
     getOne,
-    deleteOne
+    deleteOne,
+    update
 }
