@@ -12,7 +12,39 @@ function show(req, res) {
     })
 }
 
+function newSkill(req, res) {
+    res.render('skills/new', { title: 'new skill'})
+}
+
+function create(req, res) {
+    Skill.create(req.body)
+    res.redirect('/skills')
+}
+
+function deleteSkill(req, res) {
+    Skill.deleteOne(req.params.name)
+    res.redirect('/skills')
+}
+
+function edit(req, res) {
+    const skill = Skill.getOne(req.params.name)
+    res.render('skills/edit', {
+        title: 'Edit Skill',
+        skill
+    })
+}
+
+function update(req, res) {
+    Skill.update(req.params.name, req.body)
+    res.redirect(`/skills/${req.params.name}`)
+}
+
 module.exports = {
     index,
-    show
+    show,
+    newSkill,
+    create,
+    deleteSkill,
+    edit,
+    update
 }

@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Detail</title>
-</head>
-<body>
-    <main>
-        <nav>
-          <ul>
-            <li><a href="/skills">&lt; Back</a></li>
-          </ul>
-        </nav>
+<%- include('../partials/header') %>
     
         <hgroup>
           <h1><%= skill.name %></h1>
           <h2><strong><%= skill.level %></strong> - <small><%= skill.type %></small></h2>
+          <a href="/skills/<%= skill.name %>">Edit Skill</a>
         </hgroup>
     
-      </main>
-</body>
-</html>
+<%- include('../partials/footer') %>
