@@ -34,9 +34,14 @@ function update(name, updatedSkill) {
     Object.assign(skill, updatedSkill)
 }
 
+function create(skill) {
+    skills.push(skill)
+}
+
 module.exports = {
     getAll,
     getOne,
     deleteOne,
-    update
+    update,
+    create
 }

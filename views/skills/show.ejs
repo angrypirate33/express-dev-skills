@@ -1,9 +1,8 @@
 <%- include('../partials/header') %>
     
-        <hgroup>
-          <h1><%= skill.name %></h1>
-          <h2><strong><%= skill.level %></strong> - <small><%= skill.type %></small></h2>
-          <a href="/skills/<%= skill.name %>">Edit Skill</a>
-        </hgroup>
-    
+    <h1><%= skill.name %></h1>
+    <h2>Skill Level: <%= skill.level %> <br>
+    <h2>Skill Type: <%= skill.type %></h2>
+    <a href="/skills/<%= skill.name %>">Edit Skill</a>
+        
 <%- include('../partials/footer') %>

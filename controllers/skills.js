@@ -17,7 +17,15 @@ function newSkill(req, res) {
 }
 
 function create(req, res) {
-    Skill.create(req.body)
+    const name = req.body.name
+    const type = req.body.type
+    const level = req.body.level
+    const newSkill = {
+        name,
+        type,
+        level
+    }
+    Skill.create(newSkill)
     res.redirect('/skills')
 }
 
