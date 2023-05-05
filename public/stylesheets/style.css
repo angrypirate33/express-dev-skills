@@ -1,8 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #98AFCF;
+  font-family: 'PT Sans', sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #05234E;
 }
+
+#navbar {
+ display: inline;
+}
+
+#mySkills {
+  padding: 0 0 2vmin -2vmin;
+}
+
+#skillList {
+  padding: 2vmin;
+  margin-top: -3vmin;
+  font-size: 2vmin;
+}
+

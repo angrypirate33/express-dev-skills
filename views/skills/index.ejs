@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
     
-        <h1>What are my skills?</h1>
-        <ul>
+        <h1 id="mySkills">What are my skills?</h1>
+        <ul id="skillList">
             <% skills.forEach(function(s) { %>
                 <li>
                     <a href="/skills/<%= s.name %>"><%= s.name %></a>
